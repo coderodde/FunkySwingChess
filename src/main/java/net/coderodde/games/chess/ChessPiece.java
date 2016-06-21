@@ -30,26 +30,26 @@ public class ChessPiece {
         return type;
     }
     
-    public char getRepresentationCharacter() {
+    public String getRepresentationString() {
         if (color.equals(ChessColor.WHITE)) {
             switch (type) {
                 case PAWN:
-                    return '\u2659';
+                    return "\u2659";
                     
                 case KNIGHT:
-                    return '\u2658';
+                    return "\u2658";
                     
                 case BISHOP:
-                    return '\u2657';
+                    return "\u2657";
                     
                 case ROOK:
-                    return '\u2656';
+                    return "\u2656";
                     
                 case QUEEN:
-                    return '\u2655';
+                    return "\u2655";
                     
                 case KING:
-                    return '\u2654';
+                    return "\u2654";
                     
                 default:
                     throw new IllegalStateException(
@@ -61,22 +61,22 @@ public class ChessPiece {
         if (color.equals(ChessColor.BLACK)) {
             switch (type) {
                 case PAWN:
-                    return '\u265f';
+                    return "\u265f";
                     
                 case KNIGHT:
-                    return '\u265e';
+                    return "\u265e";
                     
                 case BISHOP:
-                    return '\u265d';
+                    return "\u265d";
                     
                 case ROOK:
-                    return '\u265C';
+                    return "\u265C";
                     
                 case QUEEN:
-                    return '\u265B';
+                    return "\u265B";
                     
                 case KING:
-                    return '\u265A';
+                    return "\u265A";
                     
                 default:
                     throw new IllegalStateException(

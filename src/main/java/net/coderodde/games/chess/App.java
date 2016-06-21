@@ -16,7 +16,7 @@ public class App {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        Canvas canvas = new ChessCanvas();
+        ChessCanvas canvas = new ChessCanvas();
         panel.setLayout(new BorderLayout());
         panel.add(canvas, BorderLayout.CENTER);
         frame.getContentPane().add(panel);
@@ -26,6 +26,10 @@ public class App {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         putFrameToCenterOfScreen(frame);
         frame.setVisible(true);
+        
+        canvas.getChessBoard()[1][2] = new ChessPiece(ChessColor.WHITE,
+                                                      ChessPieceType.BISHOP);
+        canvas.repaint();
     }
     
     private static void putFrameToCenterOfScreen(final JFrame frame) {
@@ -34,5 +38,9 @@ public class App {
         
         frame.setLocation((screenDimension.width - frame.getWidth()) / 2, 
                           (screenDimension.height - frame.getHeight()) / 2);
+    }
+    
+    private static void populate() {
+        
     }
 }
